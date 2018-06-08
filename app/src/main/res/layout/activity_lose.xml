@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="CORRECT WORD"
+        android:textColor="#000000"
+        android:textSize="29sp"
+        android:gravity="center_horizontal"
+        android:id="@+id/correct"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="h"
+
+        android:padding="1dp"
+        android:layout_below="@id/correct"
+        android:textSize="25sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/correctword"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_below="@id/correctword"
+        android:id="@+id/loseimg"
+        android:scaleType="fitXY"
+        android:src="@drawable/youlose"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="YOU LOSE"
+        android:textSize="40sp"
+        android:id="@+id/losetext"
+        android:layout_below="@id/loseimg"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/losetext"
+        android:text="BETTER LUCK NEXT TIME"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="quit game"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/quitbtn1"
+        android:layout_marginBottom="5dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play again"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/playagainbtn"/>
+
+</RelativeLayout>

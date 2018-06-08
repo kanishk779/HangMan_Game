@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_back"
+    tools:context="com.example.android.hangman_game.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/scorelayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Score"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:id="@+id/BestscoreText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_toRightOf="@id/BestscoreText"
+            android:textSize="25sp"
+            android:gravity="center_horizontal"
+            android:id="@+id/Bestscore"
+            android:layout_weight="1"
+            android:textColor="#000000" />
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:textSize="25sp"
+            android:layout_toRightOf="@id/Bestscore"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:id="@+id/scoreText"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:id="@+id/currentscore"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="240dp"
+        android:layout_below="@id/scorelayout"
+        android:layout_height="340dp"
+        android:src="@drawable/img0" />
+
+    <LinearLayout
+        android:id="@+id/wrong_words"
+        android:layout_width="100dp"
+        android:layout_height="370dp"
+        android:layout_below="@id/scorelayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WRONG WORDS"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativetext"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@id/img"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/displayLetter">
+            <LinearLayout
+                android:id="@+id/lineartext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:id="@+id/dashrelative"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:id="@+id/lineartext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity=""/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Guess A Letter"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/img"
+        android:layout_alignParentBottom="true"
+        android:maxLength="2"
+        android:layout_alignRight="@+id/img"
+        android:hint="here"
+        android:inputType="text"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="done" />
+</RelativeLayout>
